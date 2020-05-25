@@ -4,6 +4,8 @@ Step 0: Get a k8s cluster.
 
 Step 1: Grant pod-related permissions for the default user.
 
+Becuase `minikube` enables role-based access control (RBAC) [by default](https://stackoverflow.com/a/56339158), we only need to create a role by applying `manifests/rbac.yaml`.
+
 ``` bash
 $ kubectl apply -f manifests/rbac.yaml
 ```
